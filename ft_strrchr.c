@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strlcat.c                                       :+:    :+:            */
+/*   ft_strrchr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/10/08 17:56:25 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/10 18:26:46 by alexseil      ########   odam.nl         */
+/*   Created: 2025/10/10 17:59:39 by alexseil      #+#    #+#                 */
+/*   Updated: 2025/10/10 18:26:07 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-	size_t	len;
-
-	len = ft_strlen(dest);
-	i = 0;
-	if (n > 0)
+	while (*(s + 1))
+		s++;
+	while (*s)
 	{
-		while (src[i] && i + len < n - 1)
-		{
-			dest[i + len] = src[i];
-			i++;
-		}
-		dest[i + len] = 0;
+		if (*s == (char)c)
+			return ((char *)s);
+		else
+			s--;
 	}
-	return (ft_strlen(src) + len);
+	return (NULL);
 }
+
+//char	*ft_strrchr(const char *s, int c)
+//{
+//	int		i;
+//	int		len;
+
+//	i = -1;
+//	len = ft_strlen(s);
+//	while (len - ++i >= 0)
+//		if (s[len - i] == (char)c)
+//			return ((char *)s + len - i);
+//	return (NULL);
+//}

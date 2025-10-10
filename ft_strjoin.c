@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strlcat.c                                       :+:    :+:            */
+/*   ft_strjoin.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/10/08 17:56:25 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/10 18:26:46 by alexseil      ########   odam.nl         */
+/*   Created: 2025/10/10 18:27:13 by alexseil      #+#    #+#                 */
+/*   Updated: 2025/10/10 18:49:42 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	len;
+	char	*res;
+	int		i;
+	size_t	l1;
+	size_t	l2;
 
-	len = ft_strlen(dest);
 	i = 0;
-	if (n > 0)
-	{
-		while (src[i] && i + len < n - 1)
-		{
-			dest[i + len] = src[i];
-			i++;
-		}
-		dest[i + len] = 0;
-	}
-	return (ft_strlen(src) + len);
+	l1 = ft_strlen(s1);
+	l2 = ft_strlen(s2);
+	res = (char *)malloc(sizeof(*s1) * (l1 + l2 + 1));
+	if (!res)
+		return (NULL);
+	ft_strlcpy(res, s1, l1 + 1);
+	ft_strlcpy(&res[l1], s2, l2 + 1);
+	return (res);
 }
