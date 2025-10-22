@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_substr.c                                        :+:    :+:            */
+/*   ft_substr.c                                         :+:    :+:           */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/10 17:41:26 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/10 17:56:12 by alexseil      ########   odam.nl         */
+/*   Updated: 2025/10/22 17:23:49 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
+	size_t	i;
 	char	*res;
 
 	i = 0;

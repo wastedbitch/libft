@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
+/*   ft_strjoin.c                                        :+:    :+:           */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/10 18:27:13 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/10 18:49:42 by alexseil      ########   odam.nl         */
+/*   Updated: 2025/10/22 17:25:18 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;
-	int		i;
 	size_t	l1;
 	size_t	l2;
 
-	i = 0;
 	l1 = ft_strlen(s1);
 	l2 = ft_strlen(s2);
 	res = (char *)malloc(sizeof(*s1) * (l1 + l2 + 1));

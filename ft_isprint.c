@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isprint.c                                       :+:    :+:            */
+/*   ft_isprint.c                                        :+:    :+:           */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/03 17:21:44 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/08 18:22:54 by alexseil      ########   odam.nl         */
+/*   Updated: 2025/10/22 17:40:02 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_print(int c)
+int	ft_isprint(int c)
 {
 	return (32 <= c && c <= 126);
 }
