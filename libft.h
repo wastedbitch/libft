@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/03 17:00:54 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/16 17:38:53 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/10/23 15:13:19 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int				ft_atoi(const char *str);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t len);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
-// void			*ft_memmove(void *dest, const void *src, size_t n);
+void			*ft_memmove(void *dest, const void *src, size_t n);
 // void			*ft_calloc(size_t num, size_t size);
 // int				ft_memcmp(const void *s1, const void *s2, size_t n);
 // char			*ft_strdup(const char *s);
