@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/03 17:00:54 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/23 15:13:19 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/10/25 16:50:42 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <string.h>
+//# include <stdio.h>
+//# include <string.h>
 
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);

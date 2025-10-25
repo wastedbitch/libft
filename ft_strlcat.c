@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/08 17:56:25 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/23 15:34:39 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/10/25 16:46:36 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,23 @@
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
 	size_t	i;
-	size_t	len;
-
-	len = ft_strlen(dest);
+	size_t	slen;
+	size_t	dlen;
+	
+	slen = ft_strlen(src);
+	dlen = ft_strlen(dest);
 	i = 0;
+
+	if (dlen >= n)
+		return (slen + n);
 	if (n > 0)
 	{	
-		if (n <= len)
-			return (n + len);
-		while (src[i] && i + len < n - 1)
+		while (src[i] && i + dlen < n - 1)
 		{
-			dest[i + len] = src[i];
+			dest[i + dlen] = src[i];
 			i++;
 		}
-		dest[i + len] = 0;
-		return (ft_strlen(src) + i);
+		dest[i + dlen] = 0;
 	}
-	return (ft_strlen(src));
+	return (slen + dlen);
 }
