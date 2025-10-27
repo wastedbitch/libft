@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/06 14:25:41 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/25 16:57:54 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/10/27 14:09:43 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strchr(const char *s, int c)
 			s++;
 	}
 	if (*s == (char)c)
-			return ((char *)s);
+		return ((char *)s);
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/07 20:02:26 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/25 16:51:21 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/10/27 14:06:26 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strnstr(const char *str, const char *sub, size_t len)
 {
 	int	dom;
 
+	if (*sub == '\0')
+		return ((char *)str);
 	while (len > 0 && *str)
 	{
 		dom = 0;
