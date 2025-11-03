@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/10 17:41:26 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/22 17:23:49 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/11/03 16:55:25 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	if (start >= (unsigned int)ft_strlen(s))
+	{
 		res = (char *)malloc(1);
+		if (!res)
+			return (NULL);
+		res[0] = '\0';
+		return (res);
+	}
 	else
 		res = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!res)
