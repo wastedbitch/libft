@@ -1,51 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   ft_striteri.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/10/14 19:14:47 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/06 17:24:24 by alexseil      ########   odam.nl         */
+/*   Created: 2025/11/06 17:14:37 by alexseil      #+#    #+#                 */
+/*   Updated: 2025/11/06 17:23:43 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	split_count(char const *str, char c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
-	int	count;
-	int	segment;
 
 	i = 0;
-	segment = 0;
-	count = 0;
-
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] != c)
-		{
-			if (!segment)
-			{
-				count++;
-				segment = 1;
-			}
-		}
-		else
-			segment = 0;
+		(*f)(i, &s[i]);
 		i++;
 	}
-	return (count);
 }
-
-char	**ft_split(char const *str, char c)
-{
-	return(NULL);
-}
-
-//int main(void)
-//{
-//	char *arr = "           test    meow n  meow meow meow mrrp mwow  ";
-//	printf("%d",split_count(arr, ' '));
-//}

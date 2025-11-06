@@ -1,51 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   ft_strmapi.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/10/14 19:14:47 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/06 17:24:24 by alexseil      ########   odam.nl         */
+/*   Created: 2025/11/06 17:13:37 by alexseil      #+#    #+#                 */
+/*   Updated: 2025/11/06 17:32:43 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	split_count(char const *str, char c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
-	int	count;
-	int	segment;
+	char	*str;
+	int		i;
 
 	i = 0;
-	segment = 0;
-	count = 0;
-
-	while (str[i])
+	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (s[i])
 	{
-		if (str[i] != c)
-		{
-			if (!segment)
-			{
-				count++;
-				segment = 1;
-			}
-		}
-		else
-			segment = 0;
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
-	return (count);
+	str[i] = '\0';
+	return (str);
 }
-
-char	**ft_split(char const *str, char c)
-{
-	return(NULL);
-}
-
-//int main(void)
-//{
-//	char *arr = "           test    meow n  meow meow meow mrrp mwow  ";
-//	printf("%d",split_count(arr, ' '));
-//}

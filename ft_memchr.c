@@ -1,51 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   ft_memchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/10/14 19:14:47 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/06 17:24:24 by alexseil      ########   odam.nl         */
+/*   Created: 2025/11/06 17:09:58 by alexseil      #+#    #+#                 */
+/*   Updated: 2025/11/06 17:09:59 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	split_count(char const *str, char c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
-	int	count;
-	int	segment;
+	size_t	i;
 
 	i = 0;
-	segment = 0;
-	count = 0;
-
-	while (str[i])
+	while (i < n)
 	{
-		if (str[i] != c)
-		{
-			if (!segment)
-			{
-				count++;
-				segment = 1;
-			}
-		}
-		else
-			segment = 0;
+		if (*(unsigned char *)(s + i) == (unsigned char)(c))
+			return ((void *)(s + i));
 		i++;
 	}
-	return (count);
+	return (0);
 }
-
-char	**ft_split(char const *str, char c)
-{
-	return(NULL);
-}
-
-//int main(void)
-//{
-//	char *arr = "           test    meow n  meow meow meow mrrp mwow  ";
-//	printf("%d",split_count(arr, ' '));
-//}

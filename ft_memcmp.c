@@ -1,51 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/10/14 19:14:47 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/06 17:24:24 by alexseil      ########   odam.nl         */
+/*   Created: 2025/11/06 17:10:04 by alexseil      #+#    #+#                 */
+/*   Updated: 2025/11/06 17:10:05 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	split_count(char const *str, char c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
-	int	count;
-	int	segment;
+	size_t	i;
 
 	i = 0;
-	segment = 0;
-	count = 0;
-
-	while (str[i])
+	while (i < n)
 	{
-		if (str[i] != c)
-		{
-			if (!segment)
-			{
-				count++;
-				segment = 1;
-			}
-		}
-		else
-			segment = 0;
+		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
+			return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
 		i++;
 	}
-	return (count);
+	return (0);
 }
-
-char	**ft_split(char const *str, char c)
-{
-	return(NULL);
-}
-
-//int main(void)
-//{
-//	char *arr = "           test    meow n  meow meow meow mrrp mwow  ";
-//	printf("%d",split_count(arr, ' '));
-//}
