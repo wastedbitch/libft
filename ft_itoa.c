@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_itoa.c                                          :+:    :+:            */
+/*   ft_itoa.c                                           :+:    :+:           */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/11/06 17:15:15 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/06 17:23:51 by alexseil      ########   odam.nl         */
+/*   Updated: 2025/11/12 19:03:34 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*fish(int isn, int n, size_t len)
+static char	*ft_res(int isn, int n, size_t len)
 {
 	size_t	i;
 	char	*str;
@@ -58,5 +58,5 @@ char	*ft_itoa(int n)
 		isn = 1;
 		n = -n;
 	}
-	return (fish(isn, n, len));
+	return (ft_res(isn, n, len));
 }

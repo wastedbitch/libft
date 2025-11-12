@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/11/05 18:06:02 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/05 18:06:04 by alexseil      ########   odam.nl         */
+/*   Updated: 2025/11/12 18:35:09 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	while (i < n)
-	{
+	i = -1;
+	while (i++ < (int)n)
 		*(char *)(s + i) = 0;
-		i++;
-	}
 }
