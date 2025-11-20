@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/08 17:10:39 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/08 18:23:29 by alexseil      ########   odam.nl         */
+/*   Updated: 2025/11/18 18:51:59 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	}
 	return (ft_strlen(src));
 }
+
+//int main(void)
+//{
+//	char dest[32];
+//	char *src = "meowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeow";
+//	printf("%zu >> %s \n", ft_strlcpy(dest,src,9), dest);
+//	return (0);
+//}

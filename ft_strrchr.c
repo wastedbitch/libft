@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strrchr.c                                        :+:    :+:           */
+/*   ft_strrchr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/10 17:59:39 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/27 14:05:05 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/11/18 18:45:17 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,10 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+//int main(void)
+//{
+//	char *str = "12x345x678x90";
+//	printf("%s\n", ft_strrchr(str,'x'));
+//	return (0);
+//}

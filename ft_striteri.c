@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_striteri.c                                      :+:    :+:            */
+/*   ft_striteri.c                                       :+:    :+:           */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/11/06 17:14:37 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/06 17:23:43 by alexseil      ########   odam.nl         */
+/*   Updated: 2025/11/20 18:15:44 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,16 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+
+//char meow_func(unsigned int i, char str)
+//{
+//	str[i] -= 32;
+//}
+//
+//int main(void)
+//{
+//	char *str = "meow";
+//	ft_striteri(str, meow_func);
+//	printf("%s \n", str);
+//	return (0);
+//}

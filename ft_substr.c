@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_substr.c                                         :+:    :+:           */
+/*   ft_substr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/10 17:41:26 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/03 16:55:25 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/11/18 18:41:05 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[i] = 0;
 	return (res);
 }
+
+//int main(void)
+//{
+//	char *str = "meow blub meow meow";
+//	printf("%s\n", ft_substr(str, 5,4));
+//	return (0);
+//}

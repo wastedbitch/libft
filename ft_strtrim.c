@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strtrim.c                                        :+:    :+:           */
+/*   ft_strtrim.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/13 15:17:02 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/11/05 18:04:00 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/11/18 18:37:18 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = 0;
 	return (str);
 }
+
+//int main(void)
+//{
+//	char *fish = "meow blub blub blub meow";
+//	char *meow = "meow";
+//	printf("%s\n", ft_strtrim(fish,meow));
+//	return (0);
+//}

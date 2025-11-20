@@ -6,7 +6,7 @@
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/07 20:02:26 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/27 14:06:26 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/11/20 19:01:59 by alexseil       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,13 @@ char	*ft_strnstr(const char *str, const char *sub, size_t len)
 	}
 	return (NULL);
 }
+
+//int main(void)
+//{
+//	char *str = "i am a fish meow blub meow meow";
+//	char *sub = "meow";
+//	printf("%s\n", ft_strnstr(str,sub,31));
+//	printf("%s\n", ft_strnstr(str,sub,12));
+//	printf("%s\n", ft_strnstr(str,sub,0));
+//	return (0);
+//}

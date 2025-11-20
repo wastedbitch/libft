@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strlcat.c                                        :+:    :+:           */
+/*   ft_strlcat.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexseil <alexseil@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/08 17:56:25 by alexseil      #+#    #+#                 */
-/*   Updated: 2025/10/27 14:08:30 by alexseil       ########   odam.nl        */
+/*   Updated: 2025/11/18 18:54:00 by alexseil      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	}
 	return (slen + dlen);
 }
+
+//int main(void)
+//{
+//	char dest[32] = "blub ";
+//	char *src = "meow";
+//	printf("%zu >> %s \n", ft_strlcat(dest,src,10), dest);
+//	return (0);
+//}
